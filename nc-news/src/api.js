@@ -15,3 +15,11 @@ export const getTopics = () => {
       return res.data.topics
     })
 }
+
+export const getArticles = () => {
+  return axios
+    .get("https://news-website-aj.herokuapp.com/api/articles")
+    .then(res => {
+      return res.data.articles
+    })
+}
