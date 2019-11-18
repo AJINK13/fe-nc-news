@@ -9,9 +9,15 @@ class Users extends React.Component {
 
   render() {
     const { users, isLoading } = this.state
-    return <div>Inside Users</div>
+    if (isLoading) return <p>Loading...</p>
+    return (
+      <ul>
+        {users.map(user => {
+          return <li>{user.username}</li>
+        })}
+      </ul>
+    )
   }
-
   componentDidMount() {
     api.getUsers().then(users => {
       this.setState({ users, isLoading: false })
