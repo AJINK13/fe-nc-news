@@ -1,6 +1,6 @@
 import React from "react"
 
-const Header = (props) => {
+const Header = () => {
   return <h1>Welcome to NC-NEWS</h1>
 }
 
