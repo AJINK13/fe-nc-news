@@ -1,19 +1,15 @@
 import React from "react"
-import { Link } from "@reach/router"
+import ArticlesButton from "./buttons/ArticlesButton.jsx"
+import TopicsButton from "./buttons/TopicsButton.jsx"
+import UsersButton from "./buttons/UsersButton.jsx"
 
 function Homepage() {
   return (
-    <nav>
-      <Link to="/articles">
-        <button>Articles</button>
-      </Link>
-      <Link to="/topics">
-        <button>Topics</button>
-      </Link>
-      <Link to="/users">
-        <button>Users</button>
-      </Link>
-    </nav>
+    <main>
+      <ArticlesButton />
+      <TopicsButton />
+      <UsersButton />
+    </main>
   )
 }
 

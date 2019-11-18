@@ -1,6 +1,8 @@
 import React from "react"
 import * as api from "../api.js"
-import HomepageButton from "./buttons/HomepageButton"
+import HomepageButton from "./buttons/HomepageButton.jsx"
+import TopicsButton from "./buttons/TopicsButton.jsx"
+import UsersButton from "./buttons/UsersButton.jsx"
 
 class Articles extends React.Component {
   state = {
@@ -14,6 +16,8 @@ class Articles extends React.Component {
     return (
       <main>
         <HomepageButton />
+        <TopicsButton />
+        <UsersButton />
         <ul>
           {articles.map(article => {
             return <li>{article.title}</li>
