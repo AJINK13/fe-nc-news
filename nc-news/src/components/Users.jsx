@@ -3,7 +3,7 @@ import * as api from "../api.js"
 
 class Users extends React.Component {
   state = {
-    users: {},
+    users: [],
     isLoading: true
   }
 
