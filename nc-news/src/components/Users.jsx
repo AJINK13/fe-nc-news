@@ -8,12 +8,13 @@ class Users extends React.Component {
   }
 
   render() {
+    const { users, isLoading } = this.state
     return <div>Inside Users</div>
   }
 
   componentDidMount() {
-    api.getUsers().then(res => {
-      console.log(res)
+    api.getUsers().then(users => {
+      this.setState({ users, isLoading: false })
     })
   }
 }
