@@ -18,6 +18,7 @@ class Topics extends React.Component {
       </ul>
     )
   }
+
   componentDidMount() {
     api.getTopics().then(topics => {
       this.setState({ topics, isLoading: false })

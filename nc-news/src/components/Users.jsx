@@ -18,6 +18,7 @@ class Users extends React.Component {
       </ul>
     )
   }
+
   componentDidMount() {
     api.getUsers().then(users => {
       this.setState({ users, isLoading: false })

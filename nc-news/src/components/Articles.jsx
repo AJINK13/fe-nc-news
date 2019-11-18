@@ -18,6 +18,7 @@ class Articles extends React.Component {
       </ul>
     )
   }
+
   componentDidMount() {
     api.getArticles().then(articles => {
       this.setState({ articles, isLoading: false })
