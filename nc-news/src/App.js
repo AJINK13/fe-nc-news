@@ -1,14 +1,16 @@
-import React from 'react';
-import './App.css';
+import React from "react"
+import "./App.css"
+import Header from "./components/Header.jsx"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        NC-NEWS
-      </header>
-    </div>
-  );
+class App extends React.component {
+  state = {}
+  render() {
+    return (
+      <div className="App">
+        <Header />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
