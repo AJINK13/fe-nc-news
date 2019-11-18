@@ -1,6 +1,6 @@
 import React from "react"
 import * as api from "../api.js"
-import HomepageButton from "./HomepageButton.jsx"
+import HomepageButton from "./buttons/HomepageButton"
 
 class Articles extends React.Component {
   state = {

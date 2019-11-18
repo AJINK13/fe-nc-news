@@ -1,6 +1,6 @@
 import React from "react"
 import * as api from "../api.js"
-import HomepageButton from "./HomepageButton.jsx"
+import HomepageButton from "./buttons/HomepageButton.jsx"
 
 class Users extends React.Component {
   state = {
