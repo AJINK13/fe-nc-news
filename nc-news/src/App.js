@@ -13,9 +13,9 @@ function App() {
       <Header />
       <Router>
         <Homepage path="/" />
-        <Users path="/users" />
         <Articles path="/articles" />
         <Topics path="/topics" />
+        <Users path="/users" />
       </Router>
     </div>
   )

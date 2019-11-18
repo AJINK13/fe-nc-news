@@ -1,5 +1,6 @@
 import React from "react"
 import * as api from "../api.js"
+import HomepageButton from "./HomepageButton.jsx"
 
 class Users extends React.Component {
   state = {
@@ -11,11 +12,14 @@ class Users extends React.Component {
     const { users, isLoading } = this.state
     if (isLoading) return <p>Loading...</p>
     return (
-      <ul>
-        {users.map(user => {
-          return <li>{user.username}</li>
-        })}
-      </ul>
+      <main>
+        <HomepageButton />
+        <ul>
+          {users.map(user => {
+            return <li>{user.username}</li>
+          })}
+        </ul>
+      </main>
     )
   }
 

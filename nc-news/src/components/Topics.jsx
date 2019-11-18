@@ -1,5 +1,6 @@
 import React from "react"
 import * as api from "../api.js"
+import HomepageButton from "./HomepageButton.jsx"
 
 class Topics extends React.Component {
   state = {
@@ -11,11 +12,14 @@ class Topics extends React.Component {
     const { topics, isLoading } = this.state
     if (isLoading) return <p>Loading...</p>
     return (
-      <ul>
-        {topics.map(topic => {
-          return <li>{topic.slug}</li>
-        })}
-      </ul>
+      <main>
+        <HomepageButton />
+        <ul>
+          {topics.map(topic => {
+            return <li>{topic.slug}</li>
+          })}
+        </ul>
+      </main>
     )
   }
 
