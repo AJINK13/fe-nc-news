@@ -12,7 +12,7 @@ class Topics extends React.Component {
   }
 
   render() {
-    const { isLoading } = this.state
+    const { topics, isLoading } = this.state
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
@@ -21,7 +21,7 @@ class Topics extends React.Component {
         <UsersButton />
         <h2>Topics</h2>
         <ul>
-          {this.state.topics.map(topic => {
+          {topics.map(topic => {
             return <TopicCard topic={topic} key={topic.description} />
           })}
         </ul>

@@ -21,7 +21,7 @@ class Users extends React.Component {
         <UsersButton />
         <h2>Users</h2>
         <ul>
-          {this.state.users.map(user => {
+          {users.map(user => {
             return <UserCard user={user} key={user.username} />
           })}
         </ul>

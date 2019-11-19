@@ -12,7 +12,7 @@ class Articles extends React.Component {
   }
 
   render() {
-    const { isLoading } = this.state
+    const { articles, isLoading } = this.state
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
@@ -21,7 +21,7 @@ class Articles extends React.Component {
         <UsersButton />
         <h2>Articles</h2>
         <ul>
-          {this.state.articles.map(article => {
+          {articles.map(article => {
             return <ArticleCard article={article} key={article.article_id} />
           })}
         </ul>
