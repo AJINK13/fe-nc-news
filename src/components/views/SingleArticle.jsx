@@ -1,6 +1,7 @@
 import React from "react"
 import * as api from "../../api.js"
 import HomepageButton from "../buttons/HomepageButton.jsx"
+import ArticlesButton from "../buttons/ArticlesButton.jsx"
 import TopicsButton from "../buttons/TopicsButton.jsx"
 import UsersButton from "../buttons/UsersButton.jsx"
 
@@ -16,6 +17,7 @@ class SingleArticle extends React.Component {
     return (
       <main>
         <HomepageButton />
+        <ArticlesButton />
         <TopicsButton />
         <UsersButton />
         <h2>Article</h2>
@@ -28,7 +30,8 @@ class SingleArticle extends React.Component {
   }
 
   fetchArticle = () => {
-    api.getArticle().then(article => {
+    const { article_id } = this.props
+    api.getArticle(article_id).then(article => {
       this.setState({ article, isLoading: false })
     })
   }

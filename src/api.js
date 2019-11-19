@@ -19,3 +19,7 @@ export const getArticles = () => {
     return res.data.articles
   })
 }
+
+export const getArticle = article_id => {
+  return axios.get(`${baseURL}/articles/${article_id}`)
+}
