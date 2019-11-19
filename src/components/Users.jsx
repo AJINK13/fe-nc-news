@@ -3,6 +3,7 @@ import * as api from "../api.js"
 import HomepageButton from "./buttons/HomepageButton.jsx"
 import ArticlesButton from "./buttons/ArticlesButton.jsx"
 import UsersButton from "./buttons/UsersButton.jsx"
+import UserCard from "./cards/UserCard.jsx"
 
 class Users extends React.Component {
   state = {
@@ -20,8 +21,8 @@ class Users extends React.Component {
         <UsersButton />
         <h2>Users</h2>
         <ul>
-          {users.map(user => {
-            return <li>{user.username}</li>
+          {this.state.users.map(user => {
+            return <UserCard user={user} key={user.username} />
           })}
         </ul>
       </main>
