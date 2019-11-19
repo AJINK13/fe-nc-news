@@ -2,6 +2,7 @@ import React from "react"
 import "./App.css"
 import { Router } from "@reach/router"
 import Header from "./components/Header.jsx"
+import TimeDisplay from "./components/TimeDisplay.jsx"
 import Homepage from  "./components/pages/Homepage.jsx"
 import Articles from "./components/pages/Articles.jsx"
 import Topics from "./components/pages/Topics.jsx"
@@ -11,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <TimeDisplay /> */}
+      <TimeDisplay /> 
       <Router>
         <Homepage path="/" />
         <Articles path="/articles" />
