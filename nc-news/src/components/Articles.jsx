@@ -3,6 +3,7 @@ import * as api from "../api.js"
 import HomepageButton from "./buttons/HomepageButton.jsx"
 import TopicsButton from "./buttons/TopicsButton.jsx"
 import UsersButton from "./buttons/UsersButton.jsx"
+import ArticleCard from "./cards/ArticleCard.jsx"
 
 class Articles extends React.Component {
   state = {
@@ -19,8 +20,8 @@ class Articles extends React.Component {
         <TopicsButton />
         <UsersButton />
         <ul>
-          {articles.map(article => {
-            return <li>{article.title}</li>
+          {this.state.articles.map(article => {
+            return <ArticleCard article={article} key={article.article_id} />
           })}
         </ul>
       </main>
