@@ -2,15 +2,16 @@ import React from "react"
 import "./App.css"
 import { Router } from "@reach/router"
 import Header from "./components/Header.jsx"
-import Homepage from  "./components/Homepage.jsx"
-import Users from "./components/Users.jsx"
-import Articles from "./components/Articles.jsx"
-import Topics from "./components/Topics.jsx"
+import Homepage from "./components/buttons/HomepageButton.jsx"
+import Articles from "./components/cards/ArticleCard.jsx"
+import Topics from "./components/cards/TopicCard.jsx"
+import Users from "./components/cards/UserCard.jsx"
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <TimeDisplay />
       <Router>
         <Homepage path="/" />
         <Articles path="/articles" />
