@@ -14,6 +14,7 @@ class SingleArticle extends React.Component {
   render() {
     const { article, isLoading } = this.state
     if (isLoading) return <p>Loading...</p>
+    console.log(article)
     return (
       <main>
         <HomepageButton />

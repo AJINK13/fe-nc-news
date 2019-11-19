@@ -9,16 +9,16 @@ const ArticleCard = props => {
     <main>
       <nav>
         <Link to={`/articles/${article_id}`}>
-          <h2>{title}</h2>
+          <h3>{title}</h3>
         </Link>
       </nav>
-      <h3>Topic: {topic}</h3>
-      <h3>Author: {author}</h3>
-      <h4>Votes: {votes}</h4>
-      <h5>
+      <h4>Topic: {topic}</h4>
+      <h5>Author: {author}</h5>
+      <h6>Votes: {votes}</h6>
+      <h6>
         Date Created:{" "}
         {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
-      </h5>
+      </h6>
     </main>
   )
 }

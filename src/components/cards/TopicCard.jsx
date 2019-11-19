@@ -5,7 +5,7 @@ const TopicCard = props => {
 
   return (
     <main>
-      <h2>{slug}</h2>
+      <h3>{slug}</h3>
     </main>
   )
 }

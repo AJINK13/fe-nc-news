@@ -5,7 +5,7 @@ const UserCard = props => {
 
   return (
     <main>
-      <h2>{username}</h2>
+      <h3>{username}</h3>
     </main>
   )
 }
