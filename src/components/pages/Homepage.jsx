@@ -1,7 +1,7 @@
 import React from "react"
-import ArticlesButton from "./buttons/ArticlesButton.jsx"
-import TopicsButton from "./buttons/TopicsButton.jsx"
-import UsersButton from "./buttons/UsersButton.jsx"
+import ArticlesButton from "../buttons/ArticlesButton.jsx"
+import TopicsButton from "../buttons/TopicsButton.jsx"
+import UsersButton from "../buttons/UsersButton.jsx"
 
 function Homepage() {
   return (

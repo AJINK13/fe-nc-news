@@ -11,7 +11,7 @@ const ArticleCard = props => {
       <h3>{author}</h3>
       <h5>{votes}</h5>
       <h5>{created_at}</h5>
-      <h5>{}</h5>
+      <h5>{moment().format()}</h5>
     </main>
   )
 }

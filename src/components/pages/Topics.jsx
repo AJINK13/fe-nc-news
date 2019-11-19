@@ -1,9 +1,9 @@
 import React from "react"
-import * as api from "../api.js"
-import HomepageButton from "./buttons/HomepageButton.jsx"
-import ArticlesButton from "./buttons/ArticlesButton.jsx"
-import UsersButton from "./buttons/UsersButton.jsx"
-import TopicCard from "./cards/TopicCard.jsx"
+import * as api from "../../api.js"
+import HomepageButton from "../buttons/HomepageButton.jsx"
+import ArticlesButton from "../buttons/ArticlesButton.jsx"
+import UsersButton from "../buttons/UsersButton.jsx"
+import TopicCard from "../cards/TopicCard.jsx"
 
 class Topics extends React.Component {
   state = {
