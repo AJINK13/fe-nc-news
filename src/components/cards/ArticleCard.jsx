@@ -7,9 +7,9 @@ const ArticleCard = props => {
   return (
     <main>
       <h2>{title}</h2>
-      <h3>{topic}</h3>
-      <h3>{author}</h3>
-      <h5>{votes}</h5>
+      <h3>Topic: {topic}</h3>
+      <h3>Author: {author}</h3>
+      <h5> Votes: {votes}</h5>
       <h5>Date Created: {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}</h5>
     </main>
   )
