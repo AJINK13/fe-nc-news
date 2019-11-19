@@ -28,6 +28,10 @@ class Articles extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchArticles()
+  }
+
+  fetchArticles = () => {
     api.getArticles().then(articles => {
       this.setState({ articles, isLoading: false })
     })

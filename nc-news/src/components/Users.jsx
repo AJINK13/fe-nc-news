@@ -28,6 +28,10 @@ class Users extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchUsers()
+  }
+
+  fetchUsers = () => {
     api.getUsers().then(users => {
       this.setState({ users, isLoading: false })
     })

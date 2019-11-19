@@ -28,6 +28,10 @@ class Topics extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchTopics()
+  }
+
+  fetchTopics = () => {
     api.getTopics().then(topics => {
       this.setState({ topics, isLoading: false })
     })
