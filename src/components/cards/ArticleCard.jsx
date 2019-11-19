@@ -8,11 +8,9 @@ const ArticleCard = props => {
 
   return (
     <main>
-      {/* <nav>
-        <Link to="/articles/:article_id"> */}
-          <h2>{title}</h2>
-        {/* </Link>
-      </nav> */}
+      <Link to={`/articles/${article_id}`}>
+        <h2>{title}</h2>
+      </Link>
       <h3>Topic: {topic}</h3>
       <h3>Author: {author}</h3>
       <h5>Votes: {votes}</h5>
