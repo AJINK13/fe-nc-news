@@ -18,6 +18,7 @@ class Topics extends React.Component {
         <HomepageButton />
         <ArticlesButton />
         <UsersButton />
+        <h2>Topics</h2>
         <ul>
           {topics.map(topic => {
             return <li>{topic.slug}</li>

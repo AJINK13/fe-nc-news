@@ -18,6 +18,7 @@ class Users extends React.Component {
         <HomepageButton />
         <ArticlesButton />
         <UsersButton />
+        <h2>Users</h2>
         <ul>
           {users.map(user => {
             return <li>{user.username}</li>

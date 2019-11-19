@@ -10,7 +10,13 @@ const ArticleCard = props => {
     votes,
     comment_count
   } = props.article
-  return console.log(article_id, title, author, topic, votes)
+
+  console.log(props)
+  return(
+    <main>
+      <h2>{title}</h2>
+    </main>
+  )
 }
 
 export default ArticleCard

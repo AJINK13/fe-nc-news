@@ -12,13 +12,14 @@ class Articles extends React.Component {
   }
 
   render() {
-    const { articles, isLoading } = this.state
+    const { isLoading } = this.state
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
         <HomepageButton />
         <TopicsButton />
         <UsersButton />
+        <h2>Articles</h2>
         <ul>
           {this.state.articles.map(article => {
             return <ArticleCard article={article} key={article.article_id} />
