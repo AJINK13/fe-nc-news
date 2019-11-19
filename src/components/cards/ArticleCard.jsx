@@ -9,7 +9,6 @@ const ArticleCard = props => {
     votes
   } = props.article
 
-  console.log(props.article)
   return(
     <main>
       <h2>{title}</h2>
