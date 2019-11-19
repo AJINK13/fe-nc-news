@@ -19,7 +19,7 @@ function App() {
         <Articles path="/articles" />
         <Topics path="/topics" />
         <Users path="/users" />
-        <SingleArticle path="/articles/:article-id" />
+        <SingleArticle path="/articles/:article_id" />
       </Router>
     </div>
   )
