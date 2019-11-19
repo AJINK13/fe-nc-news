@@ -10,8 +10,7 @@ const ArticleCard = props => {
       <h3>{topic}</h3>
       <h3>{author}</h3>
       <h5>{votes}</h5>
-      <h5>{created_at}</h5>
-      <h5>{moment().format()}</h5>
+      <h5>Date Created: {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}</h5>
     </main>
   )
 }
