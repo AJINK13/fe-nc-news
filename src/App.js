@@ -3,6 +3,7 @@ import "./App.css"
 import { Router } from "@reach/router"
 import Header from "./components/Header.jsx"
 import TimeDisplay from "./components/TimeDisplay.jsx"
+import LinkButtons from "./components/LinkButtons.jsx"
 import Homepage from "./components/views/Homepage.jsx"
 import Articles from "./components/views/Articles.jsx"
 import Topics from "./components/views/Topics.jsx"
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <TimeDisplay />
+      <LinkButtons />
       <Router>
         <Homepage path="/" />
         <Articles path="/articles" />

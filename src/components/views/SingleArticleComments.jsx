@@ -5,21 +5,23 @@ import TopicsButton from "../buttons/TopicsButton"
 import UsersButton from "../buttons/UsersButton"
 
 class SingleArticleComments extends React.Component {
-    state = {
-        comments: [],
-        isLoading: true
-    }
+  state = {
+    comments: [],
+    isLoading: true
+  }
 
-    render() {
-        const { comments, isLoading } = this.state
-        if (isLoading) return <p>Loading...</p>
-        return (
-            <main>
-                <HomepageButton />
-                <ArticlesButton />
-                <TopicsButton />
-                <UsersButton />
-            </main>
-        )
-    }
+  render() {
+    const { comments, isLoading } = this.state
+    if (isLoading) return <p>Loading...</p>
+    return (
+      <main>
+        <HomepageButton />
+        <ArticlesButton />
+        <TopicsButton />
+        <UsersButton />
+      </main>
+    )
+  }
 }
+
+export default SingleArticleComments
