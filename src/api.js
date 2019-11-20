@@ -25,3 +25,9 @@ export const getArticle = article_id => {
     return res.data.article
   })
 }
+
+export const getCommentsByArticleID = article_id => {
+  return axios.get(`${baseURL}/articles/${article_id}/comments`).then(res => {
+    return res.data.comments
+  })
+}
