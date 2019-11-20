@@ -4,6 +4,7 @@ import HomepageButton from "../buttons/HomepageButton.jsx"
 import ArticlesButton from "../buttons/ArticlesButton.jsx"
 import TopicsButton from "../buttons/TopicsButton.jsx"
 import UsersButton from "../buttons/UsersButton.jsx"
+import { Link } from "@reach/router"
 const moment = require("moment")
 
 class SingleArticle extends React.Component {
@@ -32,7 +33,11 @@ class SingleArticle extends React.Component {
           Date Created:{" "}
           {moment(article.created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
         </h6>
-        <h6>Comments: {article.comment_count}</h6>
+        <nav>
+          <Link to={`/articles/${article.article_id}/comments`}>
+            <h6>Comments: {article.comment_count}</h6>
+          </Link>
+        </nav>
       </main>
     )
   }
