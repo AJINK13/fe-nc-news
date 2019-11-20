@@ -20,7 +20,7 @@ function App() {
       <Router>
         <Homepage path="/" />
         <Articles path="/articles" />
-        <Topics path="/topics" />
+        <Topics path="/topics/*" />
         <Users path="/users" />
         <SingleArticle path="/articles/:article_id" />
         <SingleArticleComments path="/articles/:article_id/comments" />

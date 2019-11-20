@@ -1,6 +1,8 @@
 import React from "react"
+import { Router } from "@reach/router"
 import * as api from "../../api.js"
 import TopicCard from "../cards/TopicCard.jsx"
+import Articles from "../views/Articles.jsx"
 
 class Topics extends React.Component {
   state = {
@@ -19,7 +21,9 @@ class Topics extends React.Component {
             return <TopicCard topic={topic} key={topic.description} />
           })}
         </ul>
-        
+        <Router>
+          <Articles path="/:topic"/>
+        </Router>
       </main>
     )
   }
