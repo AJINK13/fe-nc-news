@@ -1,13 +1,19 @@
 import React from "react"
 
-const TopicCard = props => {
-  const { slug } = props.topic
+class TopicCard extends React.Component {
+  state = {
+    articles: [],
+    isLoading: true
+  }
 
-  return (
-    <main>
-      <h3>{slug}</h3>
-    </main>
-  )
+  render() {
+    const { topic } = this.props
+    return (
+      <main>
+        <h3>{topic.slug}</h3>
+      </main>
+    )
+  }
 }
 
 export default TopicCard

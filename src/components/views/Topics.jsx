@@ -19,6 +19,7 @@ class Topics extends React.Component {
             return <TopicCard topic={topic} key={topic.description} />
           })}
         </ul>
+        
       </main>
     )
   }

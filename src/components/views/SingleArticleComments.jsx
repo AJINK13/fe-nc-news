@@ -11,7 +11,6 @@ class SingleArticleComments extends React.Component {
   render() {
     const { comments, isLoading } = this.state
     if (isLoading) return <p>Loading...</p>
-    console.log(comments)
     return (
       <main>
         <h2>Article Comments</h2>
