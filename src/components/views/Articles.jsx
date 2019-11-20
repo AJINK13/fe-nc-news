@@ -1,6 +1,7 @@
 import React from "react"
 import * as api from "../../api.js"
 import ArticleCard from "../cards/ArticleCard.jsx"
+import SortArticles from "../utils/SortArticles.jsx"
 
 class Articles extends React.Component {
   state = {
@@ -16,6 +17,7 @@ class Articles extends React.Component {
     return (
       <main>
         <h2>Articles</h2>
+        <SortArticles fetchArticles={this.fetchArticles} />
         <ul>
           {articles.map(article => {
             return <ArticleCard article={article} key={article.article_id} />
