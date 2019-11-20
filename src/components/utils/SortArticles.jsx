@@ -10,13 +10,13 @@ class SortArticles extends React.Component {
     return (
       <div>
         <form onSubmit={this.HandleSubmit}>
-          <label>Sort By:</label>
+          <label>Sort By</label>
           <select name="sort_by" onChange={this.handleChange}>
             <option value="created_at">Date</option>
             <option value="comment_count">Comments</option>
             <option value="votes">Votes</option>
           </select>
-          <label> Order:</label>
+          <label> Order</label>
           <select name="order" onChange={this.handleChange}>
             <option value="desc">Descending</option>
             <option value="asc">Ascending</option>

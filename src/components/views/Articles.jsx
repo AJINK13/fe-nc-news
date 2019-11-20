@@ -6,8 +6,6 @@ import SortArticles from "../utils/SortArticles.jsx"
 class Articles extends React.Component {
   state = {
     articles: [],
-    sort_by: "created_at",
-    order: "desc",
     isLoading: true
   }
 
