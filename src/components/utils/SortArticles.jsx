@@ -12,7 +12,7 @@ class SortArticles extends React.Component {
         <form onSubmit={this.HandleSubmit}>
           <label>Sort By</label>
           <select name="sort_by" onChange={this.handleChange}>
-            <option value="created_at">Date</option>
+            <option value="created_at">Date Created</option>
             <option value="comment_count">Comments</option>
             <option value="votes">Votes</option>
           </select>
