@@ -10,6 +10,7 @@ import Topics from "./components/views/Topics.jsx"
 import Users from "./components/views/Users.jsx"
 import SingleArticle from "./components/views/SingleArticle.jsx"
 import SingleArticleComments from "./components/views/SingleArticleComments.jsx"
+import CreateNewComment from "./components/views/CreateNewComment.jsx"
 
 class App extends React.Component {
   state = {
