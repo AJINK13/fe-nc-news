@@ -8,7 +8,7 @@ const moment = require("moment")
 
 class SingleArticle extends React.Component {
   state = {
-    article: [],
+    article: {},
     isLoading: true
   }
 
