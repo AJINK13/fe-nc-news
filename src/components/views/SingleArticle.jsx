@@ -1,9 +1,5 @@
 import React from "react"
 import * as api from "../../api.js"
-import HomepageButton from "../buttons/HomepageButton.jsx"
-import ArticlesButton from "../buttons/ArticlesButton.jsx"
-import TopicsButton from "../buttons/TopicsButton.jsx"
-import UsersButton from "../buttons/UsersButton.jsx"
 import { Link } from "@reach/router"
 const moment = require("moment")
 
@@ -19,10 +15,6 @@ class SingleArticle extends React.Component {
     console.log(article)
     return (
       <main>
-        <HomepageButton />
-        <ArticlesButton />
-        <TopicsButton />
-        <UsersButton />
         <h2>Article</h2>
         <h3>{article.title}</h3>
         <h4>Topic: {article.topic}</h4>

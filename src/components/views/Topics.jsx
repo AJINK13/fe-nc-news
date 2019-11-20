@@ -1,8 +1,5 @@
 import React from "react"
 import * as api from "../../api.js"
-import HomepageButton from "../buttons/HomepageButton.jsx"
-import ArticlesButton from "../buttons/ArticlesButton.jsx"
-import UsersButton from "../buttons/UsersButton.jsx"
 import TopicCard from "../cards/TopicCard.jsx"
 
 class Topics extends React.Component {
@@ -16,9 +13,6 @@ class Topics extends React.Component {
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
-        <HomepageButton />
-        <ArticlesButton />
-        <UsersButton />
         <h2>Topics</h2>
         <ul>
           {topics.map(topic => {

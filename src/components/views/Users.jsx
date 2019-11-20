@@ -1,8 +1,5 @@
 import React from "react"
 import * as api from "../../api.js"
-import HomepageButton from "../buttons/HomepageButton.jsx"
-import ArticlesButton from "../buttons/ArticlesButton.jsx"
-import UsersButton from "../buttons/UsersButton.jsx"
 import UserCard from "../cards/UserCard.jsx"
 
 class Users extends React.Component {
@@ -16,9 +13,6 @@ class Users extends React.Component {
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
-        <HomepageButton />
-        <ArticlesButton />
-        <UsersButton />
         <h2>Users</h2>
         <ul>
           {users.map(user => {
