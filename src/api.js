@@ -14,9 +14,9 @@ export const getTopics = () => {
   })
 }
 
-export const getArticles = (sort_by, order) => {
+export const getArticles = (topic, sort_by, order) => {
   return axios
-    .get(`${baseURL}/articles`, { params: { sort_by, order } })
+    .get(`${baseURL}/articles`, { params: { sort_by, order, topic } })
     .then(res => {
       return res.data.articles
     })

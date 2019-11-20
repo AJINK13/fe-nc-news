@@ -24,16 +24,23 @@ class Articles extends React.Component {
       </main>
     )
   }
-
+  
   componentDidMount() {
     this.fetchArticles()
   }
-
+  
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.topic !== prevProps.topic)
+    this.fetchArticles()
+  }
+  
   fetchArticles = (sort_by, order) => {
-    api.getArticles(sort_by, order).then(articles => {
+    const { topic } = this.props
+    api.getArticles(topic, sort_by, order).then(articles => {
       this.setState({ articles, isLoading: false })
     })
   }
+  
 }
 
 export default Articles
