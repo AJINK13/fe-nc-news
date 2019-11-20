@@ -29,6 +29,9 @@ class SingleArticle extends React.Component {
             <h6>Comments: {article.comment_count}</h6>
           </Link>
         </nav>
+        {/* <Router>
+          <SingleArticleComments path="/comments" />
+        </Router> */}
       </main>
     )
   }

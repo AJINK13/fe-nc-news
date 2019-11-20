@@ -1,7 +1,7 @@
 import React from "react"
 import * as api from "../../api.js"
 import ArticleCard from "../cards/ArticleCard.jsx"
-import SortArticles from "../utils/SortArticles.jsx"
+import SortArticles from "../views/SortArticles.jsx"
 
 class Articles extends React.Component {
   state = {
