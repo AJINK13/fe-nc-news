@@ -14,10 +14,12 @@ export const getTopics = () => {
   })
 }
 
-export const getArticles = () => {
-  return axios.get(`${baseURL}/articles`).then(res => {
-    return res.data.articles
-  })
+export const getArticles = (sort_by, order) => {
+  return axios
+    .get(`${baseURL}/articles`, { params: { sort_by, order } })
+    .then(res => {
+      return res.data.articles
+    })
 }
 
 export const getArticle = article_id => {

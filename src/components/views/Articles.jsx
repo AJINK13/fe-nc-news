@@ -5,6 +5,8 @@ import ArticleCard from "../cards/ArticleCard.jsx"
 class Articles extends React.Component {
   state = {
     articles: [],
+    sort_by: "created_at",
+    order: "desc",
     isLoading: true
   }
 
@@ -27,8 +29,8 @@ class Articles extends React.Component {
     this.fetchArticles()
   }
 
-  fetchArticles = () => {
-    api.getArticles().then(articles => {
+  fetchArticles = (sort_by, order) => {
+    api.getArticles(sort_by, order).then(articles => {
       this.setState({ articles, isLoading: false })
     })
   }
