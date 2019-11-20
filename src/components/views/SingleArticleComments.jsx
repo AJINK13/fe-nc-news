@@ -1,5 +1,6 @@
 import React from "react"
 import * as api from "../../api.js"
+import SingleArticleCommentCard from "../cards/SingleArticleCommentCard.jsx"
 
 class SingleArticleComments extends React.Component {
   state = {
@@ -14,6 +15,16 @@ class SingleArticleComments extends React.Component {
     return (
       <main>
         <h2>Article Comments</h2>
+        <ul>
+          {comments.map(comment => {
+            return (
+              <SingleArticleCommentCard
+                comment={comment}
+                key={comment.comment_id}
+              />
+            )
+          })}
+        </ul>
       </main>
     )
   }
