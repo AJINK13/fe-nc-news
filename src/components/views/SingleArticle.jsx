@@ -42,7 +42,7 @@ class SingleArticle extends React.Component {
 
   fetchArticle = () => {
     const { article_id } = this.props
-    api.getArticle(article_id).then(article => {
+    api.getArticleByArticleID(article_id).then(article => {
       this.setState({ article, isLoading: false })
     })
   }

@@ -22,7 +22,7 @@ export const getArticles = (topic, sort_by, order) => {
     })
 }
 
-export const getArticle = article_id => {
+export const getArticleByArticleID = article_id => {
   return axios.get(`${baseURL}/articles/${article_id}`).then(res => {
     return res.data.article
   })
@@ -35,7 +35,13 @@ export const getCommentsByArticleID = article_id => {
 }
 
 export const postCommentByArticleID = (article_id, comment) => {
-  return axios.post(`${baseURL}/articles/${article_id}/comments`, comment).then(res => {
-    return res.data.comment
-  })
+  return axios
+    .post(`${baseURL}/articles/${article_id}/comments`, comment)
+    .then(res => {
+      return res.data.comment
+    })
+}
+
+export const deleteCommentByCommentID = comment_id => {
+  return axios.delete(`/comments${comment_id}`)
 }
