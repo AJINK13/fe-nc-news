@@ -18,6 +18,7 @@ class App extends React.Component {
   }
 
   render() {
+    const { loggedInUser } = this.state
     return (
       <div className="App">
         <Header />
@@ -30,7 +31,7 @@ class App extends React.Component {
           <Users path="/users" />
           <SingleArticle path="/articles/:article_id" />
           <SingleArticleComments path="/articles/:article_id/comments" />
-          <CreateNewComment path="/articles/:article_id/comments" />
+          <CreateNewComment path="/articles/:article_id/comments" user={loggedInUser}/>
         </Router>
       </div>
     )
