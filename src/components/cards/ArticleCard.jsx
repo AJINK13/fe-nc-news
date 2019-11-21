@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "@reach/router"
+import VoteUpdater from "../views/VoteUpdater.jsx"
 const moment = require("moment")
 
 const ArticleCard = props => {
@@ -15,6 +16,7 @@ const ArticleCard = props => {
       <h4>Topic: {topic}</h4>
       <h5>Author: {author}</h5>
       <h6>Votes: {votes}</h6>
+      <VoteUpdater data={votes} />
       <h6>
         Date Created:{" "}
         {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
