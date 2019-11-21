@@ -1,6 +1,6 @@
 import React from "react"
 
-class CreateNewComment extends React.Component {
+class AddComment extends React.Component {
   state = {
     body: ""
   }
@@ -23,11 +23,11 @@ class CreateNewComment extends React.Component {
 
   handleSubmit = event => {
     const { body } = this.state
-    const { loggedInUser, postComment } = this.props
+    const { loggedInUser, addCommentByArticleID } = this.props
     event.preventDefault()
-    postComment(body, loggedInUser)
+    addCommentByArticleID(body, loggedInUser)
     this.setState({ body: "" })
   }
 }
 
-export default CreateNewComment
+export default AddComment

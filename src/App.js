@@ -32,7 +32,7 @@ class App extends React.Component {
           <SingleArticle path="/articles/:article_id" />
           <SingleArticleComments
             path="/articles/:article_id/comments"
-            user={loggedInUser}
+            loggedInUser={loggedInUser}
           />
           <CreateNewComment path="/articles/:article_id/comments" />
         </Router>

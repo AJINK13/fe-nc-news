@@ -1,7 +1,7 @@
 import React from "react"
 import * as api from "../../api.js"
 import SingleArticleCommentCard from "../cards/SingleArticleCommentCard.jsx"
-import CreateNewComment from "./CreateNewComment.jsx"
+import AddComment from "./AddComment.jsx"
 
 class SingleArticleComments extends React.Component {
   state = {
@@ -11,13 +11,16 @@ class SingleArticleComments extends React.Component {
 
   render() {
     const { comments, isLoading } = this.state
-    const { user } = this.props
-    console.log(user)
+    const { loggedInUser } = this.props
+    console.log(loggedInUser)
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
-        <CreateNewComment />
         <h2>Article Comments</h2>
+        <AddComment
+          addCommentByArticleID={addCommentByArticleID}
+          loggedInUser={loggedInUser}
+        />
         <ul>
           {comments.map(comment => {
             return (
@@ -41,6 +44,19 @@ class SingleArticleComments extends React.Component {
     api.getCommentsByArticleID(article_id).then(comments => {
       this.setState({ comments, isLoading: false })
     })
+  }
+
+  addCommentByArticleID = (body, loggedInUser) => {
+    const { article_id } = this.props
+    api
+      .postCommentByArticleID(article_id, { body, loggedInUser })
+      .then(comment => {
+        this.setState(({ comments }) => {
+          return {
+            comments: [...comments, comment]
+          }
+        })
+      })
   }
 }
 
