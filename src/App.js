@@ -30,8 +30,11 @@ class App extends React.Component {
           <Topics path="/topics/*" />
           <Users path="/users" />
           <SingleArticle path="/articles/:article_id" />
-          <SingleArticleComments path="/articles/:article_id/comments" />
-          <CreateNewComment path="/articles/:article_id/comments" user={loggedInUser}/>
+          <SingleArticleComments
+            path="/articles/:article_id/comments"
+            user={loggedInUser}
+          />
+          <CreateNewComment path="/articles/:article_id/comments" />
         </Router>
       </div>
     )

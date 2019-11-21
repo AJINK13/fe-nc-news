@@ -1,6 +1,7 @@
 import React from "react"
 import * as api from "../../api.js"
 import SingleArticleCommentCard from "../cards/SingleArticleCommentCard.jsx"
+import CreateNewComment from "./CreateNewComment.jsx"
 
 class SingleArticleComments extends React.Component {
   state = {
@@ -10,9 +11,12 @@ class SingleArticleComments extends React.Component {
 
   render() {
     const { comments, isLoading } = this.state
+    const { user } = this.props
+    console.log(user)
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
+        <CreateNewComment />
         <h2>Article Comments</h2>
         <ul>
           {comments.map(comment => {

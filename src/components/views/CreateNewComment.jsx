@@ -6,7 +6,6 @@ class CreateNewComment extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const { body } = this.state
     return (
       <form onSubmit={this.handleSubmit}>
