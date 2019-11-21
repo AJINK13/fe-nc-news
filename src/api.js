@@ -1,5 +1,4 @@
 import axios from "axios"
-import { request } from "http"
 
 const baseURL = "https://news-website-aj.herokuapp.com/api"
 

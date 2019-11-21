@@ -12,13 +12,12 @@ class SingleArticleComments extends React.Component {
   render() {
     const { comments, isLoading } = this.state
     const { loggedInUser } = this.props
-    console.log(loggedInUser)
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
         <h2>Article Comments</h2>
         <AddComment
-          addCommentByArticleID={addCommentByArticleID}
+          addCommentByArticleID={this.addCommentByArticleID}
           loggedInUser={loggedInUser}
         />
         <ul>
@@ -39,6 +38,12 @@ class SingleArticleComments extends React.Component {
     this.fetchCommentsByArticleID()
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.comments.length !== prevState.comments.length) {
+      this.fetchCommentsByArticleID()
+    }
+  }
+
   fetchCommentsByArticleID = () => {
     const { article_id } = this.props
     api.getCommentsByArticleID(article_id).then(comments => {
@@ -53,7 +58,7 @@ class SingleArticleComments extends React.Component {
       .then(comment => {
         this.setState(({ comments }) => {
           return {
-            comments: [...comments, comment]
+            comments: [comment, ...comments]
           }
         })
       })

@@ -9,6 +9,8 @@ class AddComment extends React.Component {
     const { body } = this.state
     return (
       <form onSubmit={this.handleSubmit}>
+        <label>Comment</label>
+        <input onChange={this.handleChange} type="text" name="body"></input>
         <button variant="primary" type="submit" disabled={body.length === 0}>
           Submit
         </button>

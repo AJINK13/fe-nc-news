@@ -10,7 +10,7 @@ import Topics from "./components/views/Topics.jsx"
 import Users from "./components/views/Users.jsx"
 import SingleArticle from "./components/views/SingleArticle.jsx"
 import SingleArticleComments from "./components/views/SingleArticleComments.jsx"
-import CreateNewComment from "./components/views/CreateNewComment.jsx"
+import AddComment from "./components/views/AddComment"
 
 class App extends React.Component {
   state = {
@@ -34,7 +34,7 @@ class App extends React.Component {
             path="/articles/:article_id/comments"
             loggedInUser={loggedInUser}
           />
-          <CreateNewComment path="/articles/:article_id/comments" />
+          <AddComment path="/articles/:article_id/comments" />
         </Router>
       </div>
     )
