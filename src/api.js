@@ -45,3 +45,19 @@ export const postCommentByArticleID = (article_id, comment) => {
 export const deleteCommentByCommentID = comment_id => {
   return axios.delete(`${baseURL}/comments/${comment_id}`)
 }
+
+export const patchArticleVoteByArticleID = (changeVote, article_id) => {
+  return axios
+    .patch(`${baseURL}/articles/${article_id}`, { inc_votes: changeVote })
+    .then(res => {
+      return res.data.article
+    })
+}
+
+export const patchCommentVoteByCommentID = (changeVote, comment_id) => {
+  return axios
+    .patch(`${baseURL}/comments/${comment_id}`, { inc_votes: changeVote })
+    .then(res => {
+      return res.data.comment
+    })
+}

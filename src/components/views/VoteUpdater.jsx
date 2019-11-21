@@ -7,8 +7,8 @@ class VoteUpdater extends React.Component {
 
   render() {
     const { voteChange } = this.state
-    const { votes } = this.props.data
-    console.log(voteChange, votes)
+    const { votes, article_id } = this.props.data
+    console.log(voteChange, votes, article_id)
 
     return (
       <>
@@ -27,13 +27,13 @@ class VoteUpdater extends React.Component {
 
   updateVotes = (changeVote, article_id, comment_id) => {
     this.setState(currentState => {
-      return { votesChange: currentState.votesChange + voteDifference }
+      return { votesChange: currentState.voteChange + changeVote }
     })
 
     if (article_id) {
-      return api.patchCommentVotes(changeVote, article_id)
+      return api.patchArticleVoteByArticleID(changeVote, article_id)
     } else if (comment_id) {
-      return api.patchArticleVotes(changeVote, comment_id)
+      return api.patchCommentVoteByArticleID(changeVote, comment_id)
     }
   }
 }
