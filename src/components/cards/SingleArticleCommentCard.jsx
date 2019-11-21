@@ -16,8 +16,7 @@ const SingleArticleCommentCard = props => {
       ) : null}
       <h3>Author: {author}</h3>
       <h4>{body}</h4>
-      <h6>Votes: {votes}</h6>
-      <VoteUpdater data={(votes, comment_id)} />
+      <VoteUpdater votes={votes} comment_id={comment_id} />
       <h6>
         Date Created:{" "}
         {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}

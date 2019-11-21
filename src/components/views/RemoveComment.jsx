@@ -7,7 +7,7 @@ const RemoveComment = props => {
       onClick={() => {
         removeCommentByCommentID(comment_id)
       }}
-    ></button>
+    >DELETE COMMENT</button>
   )
 }
 

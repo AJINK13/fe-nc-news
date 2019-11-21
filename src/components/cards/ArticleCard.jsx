@@ -15,8 +15,7 @@ const ArticleCard = props => {
       </nav>
       <h4>Topic: {topic}</h4>
       <h5>Author: {author}</h5>
-      <h6>Votes: {votes}</h6>
-      <VoteUpdater data={(votes, article_id)} />
+      <VoteUpdater votes={votes} article_id={article_id} />
       <h6>
         Date Created:{" "}
         {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
