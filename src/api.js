@@ -43,5 +43,5 @@ export const postCommentByArticleID = (article_id, comment) => {
 }
 
 export const deleteCommentByCommentID = comment_id => {
-  return axios.delete(`/comments${comment_id}`)
+  return axios.delete(`${baseURL}/comments/${comment_id}`)
 }

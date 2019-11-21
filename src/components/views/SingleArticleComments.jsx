@@ -67,6 +67,7 @@ class SingleArticleComments extends React.Component {
 
   removeCommentByCommentID = comment_id => {
     api.deleteCommentByCommentID(comment_id).then(() => {
+      
       this.setState(curentState => {
         const newCommentsList = curentState.comments.filter(comment => {
           return comment_id !== comment.comment_id
