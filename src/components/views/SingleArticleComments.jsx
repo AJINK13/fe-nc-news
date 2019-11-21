@@ -2,6 +2,7 @@ import React from "react"
 import * as api from "../../api.js"
 import SingleArticleCommentCard from "../cards/SingleArticleCommentCard.jsx"
 import AddComment from "./AddComment.jsx"
+import RemoveComment from "./RemoveComment.jsx"
 
 class SingleArticleComments extends React.Component {
   state = {
@@ -19,6 +20,10 @@ class SingleArticleComments extends React.Component {
         <AddComment
           addCommentByArticleID={this.addCommentByArticleID}
           loggedInUser={loggedInUser}
+        />
+        <RemoveComment
+          removeCommentByCommentID={this.removeCommentByCommentID}
+          comment_id={comment.comment_id}
         />
         <ul>
           {comments.map(comment => {
@@ -62,6 +67,17 @@ class SingleArticleComments extends React.Component {
           }
         })
       })
+  }
+
+  removeCommentByCommentID = comment_id => {
+    api.deleteCommentByCommentID(comment_id).then(() => {
+      this.setState(curentState => {
+        const newCommentsList = curentState.comments.filter(comment => {
+          return comment_id !== comment.comment_id
+        })
+        return { comments: newCommentsList }
+      })
+    })
   }
 }
 

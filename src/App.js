@@ -11,6 +11,7 @@ import Users from "./components/views/Users.jsx"
 import SingleArticle from "./components/views/SingleArticle.jsx"
 import SingleArticleComments from "./components/views/SingleArticleComments.jsx"
 import AddComment from "./components/views/AddComment"
+import RemoveComment from "./components/views/RemoveComment.jsx"
 
 class App extends React.Component {
   state = {
@@ -35,6 +36,7 @@ class App extends React.Component {
             loggedInUser={loggedInUser}
           />
           <AddComment path="/articles/:article_id/comments" />
+          <RemoveComment path="/articles/:article_id/comments" />
         </Router>
       </div>
     )
