@@ -1,7 +1,8 @@
 import React from "react"
 import * as api from "../../api.js"
-import { Link } from "@reach/router"
+import { Router, Link } from "@reach/router"
 import VoteUpdater from "../views/VoteUpdater.jsx"
+import SingleArticleComments from "./SingleArticleComments.jsx"
 const moment = require("moment")
 
 class SingleArticle extends React.Component {
@@ -26,13 +27,17 @@ class SingleArticle extends React.Component {
           {moment(article.created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
         </h6>
         <nav>
-          <Link to={`/articles/${article.article_id}/comments`}>
+          <Link
+            to={`/articles/${article.article_id}/${
+              this.props["*"] !== "comments" ? "comments" : ""
+            }`}
+          >
             <h6>Comments: {article.comment_count}</h6>
           </Link>
         </nav>
-        {/* <Router>
-          <SingleArticleComments path="/comments" />
-        </Router> */}
+        <Router>
+          <SingleArticleComments path="/comments"  loggedInUser={this.props.loggedInUser}/>
+        </Router>
       </main>
     )
   }

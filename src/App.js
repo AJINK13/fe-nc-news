@@ -9,9 +9,6 @@ import Articles from "./components/views/Articles.jsx"
 import Topics from "./components/views/Topics.jsx"
 import Users from "./components/views/Users.jsx"
 import SingleArticle from "./components/views/SingleArticle.jsx"
-import SingleArticleComments from "./components/views/SingleArticleComments.jsx"
-import AddComment from "./components/views/AddComment"
-import RemoveComment from "./components/views/RemoveComment.jsx"
 
 class App extends React.Component {
   state = {
@@ -30,13 +27,16 @@ class App extends React.Component {
           <Articles path="/articles" />
           <Topics path="/topics/*" />
           <Users path="/users" />
-          <SingleArticle path="/articles/:article_id" />
-          <SingleArticleComments
-            path="/articles/:article_id/comments"
+          <SingleArticle
+            path="/articles/:article_id/*"
             loggedInUser={loggedInUser}
           />
-          <AddComment path="/articles/:article_id/comments" />
-          <RemoveComment path="/articles/:article_id/comments" />
+          {/* <SingleArticleComments
+            path="/articles/:article_id/comments"
+            loggedInUser={loggedInUser}
+          /> */}
+          {/* <AddComment path="/articles/:article_id/comments" /> */}
+          {/* <RemoveComment path="/articles/:article_id/comments" /> */}
         </Router>
       </div>
     )
