@@ -1,4 +1,5 @@
 import axios from "axios"
+import { request } from "http"
 
 const baseURL = "https://news-website-aj.herokuapp.com/api"
 
@@ -31,5 +32,11 @@ export const getArticle = article_id => {
 export const getCommentsByArticleID = article_id => {
   return axios.get(`${baseURL}/articles/${article_id}/comments`).then(res => {
     return res.data.comments
+  })
+}
+
+export const postCommentByArticleID = (article_id, comment) => {
+  return axios.post(`${baseURL}/articles/${article_id}/comments`, comment).then(res => {
+    return res.data.comment
   })
 }
