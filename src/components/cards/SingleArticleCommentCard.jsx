@@ -1,5 +1,6 @@
 import React from "react"
 import RemoveComment from "../views/RemoveComment.jsx"
+import VoteUpdater from "../views/VoteUpdater.jsx"
 const moment = require("moment")
 
 const SingleArticleCommentCard = props => {
@@ -15,7 +16,8 @@ const SingleArticleCommentCard = props => {
       ) : null}
       <h3>Author: {author}</h3>
       <h4>{body}</h4>
-      <h5>Votes: {votes}</h5>
+      <h6>Votes: {votes}</h6>
+      <VoteUpdater data={(votes, comment_id)} />
       <h6>
         Date Created:{" "}
         {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}

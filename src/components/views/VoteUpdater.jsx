@@ -7,8 +7,8 @@ class VoteUpdater extends React.Component {
 
   render() {
     const { voteChange } = this.state
-    const { votes, article_id } = this.props.data
-    console.log(voteChange, votes, article_id)
+    const { votes, article_id, comment_id } = this.props.data
+    console.log(voteChange, votes, article_id, comment_id)
 
     return (
       <>
