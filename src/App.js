@@ -15,7 +15,7 @@ import RemoveComment from "./components/views/RemoveComment.jsx"
 
 class App extends React.Component {
   state = {
-    loggedInUser: "jessjelly"
+    loggedInUser: "tickle122"
   }
 
   render() {

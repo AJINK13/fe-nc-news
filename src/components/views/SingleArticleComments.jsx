@@ -24,7 +24,8 @@ class SingleArticleComments extends React.Component {
           {comments.map(comment => {
             return (
               <SingleArticleCommentCard
-              removeCommentByCommentID={this.removeCommentByCommentID}
+                removeCommentByCommentID={this.removeCommentByCommentID}
+                loggedInUser={loggedInUser}
                 comment={comment}
                 key={comment.comment_id}
               />
@@ -67,7 +68,6 @@ class SingleArticleComments extends React.Component {
 
   removeCommentByCommentID = comment_id => {
     api.deleteCommentByCommentID(comment_id).then(() => {
-      
       this.setState(curentState => {
         const newCommentsList = curentState.comments.filter(comment => {
           return comment_id !== comment.comment_id
