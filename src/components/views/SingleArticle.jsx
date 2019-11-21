@@ -13,6 +13,7 @@ class SingleArticle extends React.Component {
 
   render() {
     const { article, isLoading } = this.state
+    const { loggedInUser } = this.props
     if (isLoading) return <p>Loading...</p>
     return (
       <main>
@@ -36,7 +37,7 @@ class SingleArticle extends React.Component {
           </Link>
         </nav>
         <Router>
-          <SingleArticleComments path="/comments"  loggedInUser={this.props.loggedInUser}/>
+          <SingleArticleComments path="/comments"  loggedInUser={loggedInUser}/>
         </Router>
       </main>
     )

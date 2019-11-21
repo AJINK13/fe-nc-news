@@ -31,12 +31,6 @@ class App extends React.Component {
             path="/articles/:article_id/*"
             loggedInUser={loggedInUser}
           />
-          {/* <SingleArticleComments
-            path="/articles/:article_id/comments"
-            loggedInUser={loggedInUser}
-          /> */}
-          {/* <AddComment path="/articles/:article_id/comments" /> */}
-          {/* <RemoveComment path="/articles/:article_id/comments" /> */}
         </Router>
       </div>
     )
