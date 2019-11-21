@@ -1,6 +1,7 @@
 import React from "react"
 import * as api from "../../api.js"
 import { Link } from "@reach/router"
+import VoteUpdater from "../views/VoteUpdater.jsx"
 const moment = require("moment")
 
 class SingleArticle extends React.Component {
@@ -19,7 +20,7 @@ class SingleArticle extends React.Component {
         <h4>Topic: {article.topic}</h4>
         <h4>{article.body}</h4>
         <h5>Author: {article.author}</h5>
-        <h6>Votes: {article.votes}</h6>
+        <VoteUpdater votes={article.votes} article_id={article.article_id} />
         <h6>
           Date Created:{" "}
           {moment(article.created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
