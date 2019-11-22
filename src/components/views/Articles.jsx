@@ -15,6 +15,7 @@ class Articles extends React.Component {
     const { articles, isLoading, error } = this.state
 
     if (error) return <ErrorPage error={error} />
+    console.log(error)
     if (isLoading) return <p>Loading...</p>
 
     return (
@@ -49,7 +50,7 @@ class Articles extends React.Component {
         this.setState({
           error: {
             status: err.response.status,
-            message: err.response.data.msg
+            message: err.response.data.message
           },
           isLoading: false
         })

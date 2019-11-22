@@ -18,6 +18,7 @@ class SingleArticle extends React.Component {
     const { loggedInUser } = this.props
 
     if (error) return <ErrorPage error={error} />
+    console.log(error)
     if (isLoading) return <p>Loading...</p>
 
     return (
@@ -63,7 +64,7 @@ class SingleArticle extends React.Component {
         this.setState({
           error: {
             status: err.response.status,
-            message: err.response.data.msg
+            message: err.response.data.Message
           },
           isLoading: false
         })
