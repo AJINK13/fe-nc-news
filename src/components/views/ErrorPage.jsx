@@ -1,7 +1,12 @@
 import React from "react"
 
-const ErrorPage = () => {
-  return <p>Error Page</p>
+const ErrorPage = ({ error }) => {
+  return (
+    <>
+      <p>{error.status}</p>
+      <p>{error.message}</p>
+    </>
+  )
 }
 
 export default ErrorPage

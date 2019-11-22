@@ -9,6 +9,7 @@ import Articles from "./components/views/Articles.jsx"
 import Topics from "./components/views/Topics.jsx"
 import Users from "./components/views/Users.jsx"
 import SingleArticle from "./components/views/SingleArticle.jsx"
+import ErrorPage from "./components/views/ErrorPage"
 
 class App extends React.Component {
   state = {
@@ -30,6 +31,10 @@ class App extends React.Component {
           <SingleArticle
             path="/articles/:article_id/*"
             loggedInUser={loggedInUser}
+          />
+          <ErrorPage
+            error={{ status: 404, message: "Page Not Found" }}
+            default
           />
         </Router>
       </div>
