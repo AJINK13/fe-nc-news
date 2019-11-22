@@ -42,7 +42,7 @@ class Users extends React.Component {
         this.setState({
           error: {
             status: err.response.status,
-            message: err.response.data.msg
+            message: err.response.data.Message
           },
           isLoading: false
         })

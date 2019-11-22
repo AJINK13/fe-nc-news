@@ -18,7 +18,6 @@ class SingleArticle extends React.Component {
     const { loggedInUser } = this.props
 
     if (error) return <ErrorPage error={error} />
-    console.log(error)
     if (isLoading) return <p>Loading...</p>
 
     return (
