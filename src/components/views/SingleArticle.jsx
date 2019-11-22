@@ -3,18 +3,23 @@ import * as api from "../../api.js"
 import { Router, Link } from "@reach/router"
 import VoteUpdater from "../views/VoteUpdater.jsx"
 import SingleArticleComments from "./SingleArticleComments.jsx"
+import ErrorPage from "./ErrorPage.jsx"
 const moment = require("moment")
 
 class SingleArticle extends React.Component {
   state = {
     article: {},
-    isLoading: true
+    isLoading: true,
+    error: null
   }
 
   render() {
-    const { article, isLoading } = this.state
+    const { article, isLoading, error } = this.state
     const { loggedInUser } = this.props
+
+    if (error) return <ErrorPage error={error} />
     if (isLoading) return <p>Loading...</p>
+
     return (
       <main>
         <h2>Article</h2>
@@ -37,7 +42,7 @@ class SingleArticle extends React.Component {
           </Link>
         </nav>
         <Router>
-          <SingleArticleComments path="/comments"  loggedInUser={loggedInUser}/>
+          <SingleArticleComments path="/comments" loggedInUser={loggedInUser} />
         </Router>
       </main>
     )
@@ -49,9 +54,20 @@ class SingleArticle extends React.Component {
 
   fetchArticle = () => {
     const { article_id } = this.props
-    api.getArticleByArticleID(article_id).then(article => {
-      this.setState({ article, isLoading: false })
-    })
+    api
+      .getArticleByArticleID(article_id)
+      .then(article => {
+        this.setState({ article, isLoading: false })
+      })
+      .catch(err => {
+        this.setState({
+          error: {
+            status: err.response.status,
+            message: err.response.data.msg
+          },
+          isLoading: false
+        })
+      })
   }
 }
 
