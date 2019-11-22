@@ -2,17 +2,22 @@ import React from "react"
 import * as api from "../../api.js"
 import SingleArticleCommentCard from "../cards/SingleArticleCommentCard.jsx"
 import AddComment from "./AddComment.jsx"
+import ErrorPage from "./ErrorPage.jsx"
 
 class SingleArticleComments extends React.Component {
   state = {
     comments: [],
-    isLoading: true
+    isLoading: true,
+    error: null
   }
 
   render() {
-    const { comments, isLoading } = this.state
+    const { comments, isLoading, error } = this.state
     const { loggedInUser } = this.props
+
+    if (error) return <ErrorPage error={error} />
     if (isLoading) return <p>Loading...</p>
+
     return (
       <main>
         <h2>Article Comments</h2>
@@ -48,9 +53,20 @@ class SingleArticleComments extends React.Component {
 
   fetchCommentsByArticleID = () => {
     const { article_id } = this.props
-    api.getCommentsByArticleID(article_id).then(comments => {
-      this.setState({ comments, isLoading: false })
-    })
+    api
+      .getCommentsByArticleID(article_id)
+      .then(comments => {
+        this.setState({ comments, isLoading: false })
+      })
+      .catch(err => {
+        this.setState({
+          error: {
+            status: err.response.status,
+            message: err.response.data.msg
+          },
+          isLoading: false
+        })
+      })
   }
 
   addCommentByArticleID = (body, loggedInUser) => {
@@ -62,6 +78,15 @@ class SingleArticleComments extends React.Component {
           return {
             comments: [comment, ...comments]
           }
+        })
+      })
+      .catch(err => {
+        this.setState({
+          error: {
+            status: err.response.status,
+            message: err.response.data.msg
+          },
+          isLoading: false
         })
       })
   }
