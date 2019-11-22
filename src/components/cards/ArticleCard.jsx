@@ -13,7 +13,7 @@ const ArticleCard = props => {
           <h3>{title}</h3>
         </Link>
       </nav>
-      <h4>Topic: {topic}</h4>
+      <h4>Topic: {topic.charAt(0).toUpperCase() + topic.substring(1)}</h4>
       <h5>Author: {author}</h5>
       <VoteUpdater votes={votes} article_id={article_id} />
       <h6>
