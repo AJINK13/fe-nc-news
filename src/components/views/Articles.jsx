@@ -13,8 +13,10 @@ class Articles extends React.Component {
 
   render() {
     const { articles, isLoading, error } = this.state
+
     if (error) return <ErrorPage error={error} />
     if (isLoading) return <p>Loading...</p>
+
     return (
       <main>
         <h2>Articles</h2>

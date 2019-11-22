@@ -3,16 +3,21 @@ import { Router } from "@reach/router"
 import * as api from "../../api.js"
 import TopicCard from "../cards/TopicCard.jsx"
 import Articles from "../views/Articles.jsx"
+import ErrorPage from "./ErrorPage.jsx"
 
 class Topics extends React.Component {
   state = {
     topics: [],
-    isLoading: true
+    isLoading: true,
+    error: null
   }
 
   render() {
-    const { topics, isLoading } = this.state
+    const { topics, isLoading, error } = this.state
+
+    if (error) return <ErrorPage error={error} />
     if (isLoading) return <p>Loading...</p>
+
     return (
       <main>
         <h2>Topics</h2>
@@ -22,7 +27,7 @@ class Topics extends React.Component {
           })}
         </ul>
         <Router>
-          <Articles path="/:topic"/>
+          <Articles path="/:topic" />
         </Router>
       </main>
     )
@@ -33,9 +38,20 @@ class Topics extends React.Component {
   }
 
   fetchTopics = () => {
-    api.getTopics().then(topics => {
-      this.setState({ topics, isLoading: false })
-    })
+    api
+      .getTopics()
+      .then(topics => {
+        this.setState({ topics, isLoading: false })
+      })
+      .catch(err => {
+        this.setState({
+          error: {
+            status: err.response.status,
+            message: err.response.data.msg
+          },
+          isLoading: false
+        })
+      })
   }
 }
 
