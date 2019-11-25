@@ -4,6 +4,7 @@ import * as api from "../../api.js"
 import TopicCard from "../cards/TopicCard.jsx"
 import Articles from "../views/Articles.jsx"
 import ErrorPage from "./ErrorPage.jsx"
+import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty"
 
 class Topics extends React.Component {
   state = {
@@ -16,7 +17,12 @@ class Topics extends React.Component {
     const { topics, isLoading, error } = this.state
 
     if (error) return <ErrorPage error={error} />
-    if (isLoading) return <p>Loading...</p>
+    if (isLoading)
+      return (
+        <p>
+          <HourglassEmptyIcon />
+        </p>
+      )
 
     return (
       <main>

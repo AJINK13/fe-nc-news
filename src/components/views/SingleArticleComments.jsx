@@ -3,6 +3,7 @@ import * as api from "../../api.js"
 import SingleArticleCommentCard from "../cards/SingleArticleCommentCard.jsx"
 import AddComment from "./AddComment.jsx"
 import ErrorPage from "./ErrorPage.jsx"
+import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty"
 
 class SingleArticleComments extends React.Component {
   state = {
@@ -16,7 +17,12 @@ class SingleArticleComments extends React.Component {
     const { loggedInUser } = this.props
 
     if (error) return <ErrorPage error={error} />
-    if (isLoading) return <p>Loading...</p>
+    if (isLoading)
+      return (
+        <p>
+          <HourglassEmptyIcon />
+        </p>
+      )
 
     return (
       <main>

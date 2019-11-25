@@ -2,6 +2,7 @@ import React from "react"
 import * as api from "../../api.js"
 import UserCard from "../cards/UserCard.jsx"
 import ErrorPage from "./ErrorPage.jsx"
+import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty"
 
 class Users extends React.Component {
   state = {
@@ -14,7 +15,12 @@ class Users extends React.Component {
     const { users, isLoading, error } = this.state
 
     if (error) return <ErrorPage error={error} />
-    if (isLoading) return <p>Loading...</p>
+    if (isLoading)
+      return (
+        <p>
+          <HourglassEmptyIcon />
+        </p>
+      )
 
     return (
       <main>

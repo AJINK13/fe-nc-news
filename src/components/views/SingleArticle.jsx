@@ -4,6 +4,7 @@ import { Router, Link } from "@reach/router"
 import VoteUpdater from "../views/VoteUpdater.jsx"
 import SingleArticleComments from "./SingleArticleComments.jsx"
 import ErrorPage from "./ErrorPage.jsx"
+import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty"
 const moment = require("moment")
 
 class SingleArticle extends React.Component {
@@ -18,7 +19,12 @@ class SingleArticle extends React.Component {
     const { loggedInUser } = this.props
 
     if (error) return <ErrorPage error={error} />
-    if (isLoading) return <p>Loading...</p>
+    if (isLoading)
+      return (
+        <p>
+          <HourglassEmptyIcon />
+        </p>
+      )
 
     return (
       <main>
