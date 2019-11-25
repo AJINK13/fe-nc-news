@@ -1,5 +1,8 @@
 import React from "react"
 import * as api from "../../api.js"
+import Button from "@material-ui/core/Button"
+import ThumbUpIcon from "@material-ui/icons/ThumbUp"
+import ThumbDownIcon from "@material-ui/icons/ThumbDown"
 
 class VoteUpdater extends React.Component {
   state = {
@@ -13,20 +16,24 @@ class VoteUpdater extends React.Component {
     return (
       <>
         <h6>Votes: {votes + voteChange}</h6>
-        <button
+        <Button
+          variant="contained"
+          startIcon={<ThumbUpIcon />}
           onClick={() => this.updateVotes(1, article_id, comment_id)}
           disabled={voteChange === 1}
         >
           {" "}
           LIKE{" "}
-        </button>
-        <button
+        </Button>
+        <Button
+          variant="contained"
+          startIcon={<ThumbDownIcon />}
           onClick={() => this.updateVotes(-1, article_id, comment_id)}
           disabled={voteChange === -1}
         >
           {" "}
           DISLIKE{" "}
-        </button>
+        </Button>
       </>
     )
   }
