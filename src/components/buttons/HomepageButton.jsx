@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "@reach/router"
+import Button from "@material-ui/core/Button"
 
 function HomepageButton() {
   return (
     <nav>
       <Link to="/">
-        <button>Homepage</button>
+        <Button>Homepage</Button>
       </Link>
     </nav>
   )

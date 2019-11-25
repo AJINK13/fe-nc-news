@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "@reach/router"
+import Button from "@material-ui/core/Button"
 
 function TopicsButton() {
   return (
     <nav>
       <Link to="/topics">
-        <button>Topics</button>
+        <Button>Topics</Button>
       </Link>
     </nav>
   )
