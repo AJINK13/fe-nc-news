@@ -1,5 +1,5 @@
 import React from "react"
-import Articles from "../views/Articles.jsx"
+import ArticlesByUser from "../views/Articles.jsx"
 
 const UserCard = props => {
   const { username } = props.user
@@ -7,7 +7,7 @@ const UserCard = props => {
   return (
     <main>
       <h3>Author: {username}</h3>
-      <Articles />
+      <ArticlesByUser />
     </main>
   )
 }

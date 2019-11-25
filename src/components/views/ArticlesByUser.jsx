@@ -23,6 +23,7 @@ class ArticlesByUser extends React.Component {
         <SortArticles fetchArticles={this.fetchArticles} />
         <ul>
           {articles.filter(article => {
+              console.log(article)
             return <ArticleCardByUser article={article} key={article.article_id} />
           })}
         </ul>
