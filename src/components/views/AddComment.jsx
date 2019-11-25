@@ -1,4 +1,6 @@
 import React from "react"
+import Button from "@material-ui/core/Button"
+import PublishIcon from "@material-ui/icons/Publish"
 
 class AddComment extends React.Component {
   state = {
@@ -11,9 +13,15 @@ class AddComment extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>Comment</label>
         <input onChange={this.handleChange} type="text" name="body"></input>
-        <button variant="primary" type="submit" disabled={body.length === 0}>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          startIcon={<PublishIcon />}
+          disabled={body.length === 0}
+        >
           Submit
-        </button>
+        </Button>
       </form>
     )
   }
