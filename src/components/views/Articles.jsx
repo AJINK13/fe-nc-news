@@ -3,6 +3,7 @@ import * as api from "../../api.js"
 import ArticleCard from "../cards/ArticleCard.jsx"
 import SortArticles from "../views/SortArticles.jsx"
 import ErrorPage from "./ErrorPage.jsx"
+import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty"
 
 class Articles extends React.Component {
   state = {
@@ -15,7 +16,12 @@ class Articles extends React.Component {
     const { articles, isLoading, error } = this.state
 
     if (error) return <ErrorPage error={error} />
-    if (isLoading) return <p>Loading...</p>
+    if (isLoading)
+      return (
+        <p>
+          <HourglassEmptyIcon />
+        </p>
+      )
 
     return (
       <main>
