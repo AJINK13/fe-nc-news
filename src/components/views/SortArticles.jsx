@@ -1,6 +1,6 @@
 import React from "react"
 import Button from "@material-ui/core/Button"
-import PublishIcon from "@material-ui/icons/Publish"
+import SortIcon from "@material-ui/icons/Sort"
 
 class SortArticles extends React.Component {
   state = {
@@ -28,10 +28,10 @@ class SortArticles extends React.Component {
           type="submit"
           variant="contained"
           color="primary"
-          startIcon={<PublishIcon />}
+          startIcon={<SortIcon />}
           onClick={this.handleSubmit}
         >
-          Submit
+          Sort
         </Button>
       </div>
     )
