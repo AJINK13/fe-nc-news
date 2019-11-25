@@ -1,4 +1,8 @@
 import React from "react"
+import FormControl from "@material-ui/core/FormControl"
+import InputLabel from "@material-ui/core/InputLabel"
+import Select from "@material-ui/core/Select"
+import MenuItem from "@material-ui/core/MenuItem"
 import Button from "@material-ui/core/Button"
 import SortIcon from "@material-ui/icons/Sort"
 
@@ -12,17 +16,17 @@ class SortArticles extends React.Component {
     return (
       <div>
         <form onSubmit={this.HandleSubmit}>
-          <label>Sort By</label>
-          <select name="sort_by" onChange={this.handleChange}>
-            <option value="created_at">Date Created</option>
-            <option value="comment_count">Comments</option>
-            <option value="votes">Votes</option>
-          </select>
-          <label> Order</label>
-          <select name="order" onChange={this.handleChange}>
-            <option value="desc">Descending</option>
-            <option value="asc">Ascending</option>
-          </select>
+          <InputLabel>Sort By</InputLabel>
+          <Select name="sort_by" onChange={this.handleChange}>
+            <MenuItem value="created_at">Date Created</MenuItem>
+            <MenuItem value="comment_count">Comments</MenuItem>
+            <MenuItem value="votes">Votes</MenuItem>
+          </Select>
+          <InputLabel> Order</InputLabel>
+          <Select name="order" onChange={this.handleChange}>
+            <MenuItem value="desc">Descending</MenuItem>
+            <MenuItem value="asc">Ascending</MenuItem>
+          </Select>
         </form>
         <Button
           type="submit"
