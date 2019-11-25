@@ -7,6 +7,7 @@ const RemoveComment = props => {
   return (
     <Button
       variant="contained"
+      color="secondary"
       startIcon={<DeleteIcon />}
       onClick={() => {
         removeCommentByCommentID(comment_id)
