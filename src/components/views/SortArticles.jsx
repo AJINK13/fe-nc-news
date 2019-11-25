@@ -1,4 +1,6 @@
 import React from "react"
+import Button from "@material-ui/core/Button"
+import PublishIcon from "@material-ui/icons/Publish"
 
 class SortArticles extends React.Component {
   state = {
@@ -22,9 +24,15 @@ class SortArticles extends React.Component {
             <option value="asc">Ascending</option>
           </select>
         </form>
-        <button type="submit" onClick={this.handleSubmit}>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          startIcon={<PublishIcon />}
+          onClick={this.handleSubmit}
+        >
           Submit
-        </button>
+        </Button>
       </div>
     )
   }
