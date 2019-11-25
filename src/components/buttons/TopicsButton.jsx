@@ -6,7 +6,7 @@ function TopicsButton() {
   return (
     <nav>
       <Link to="/topics">
-        <Button>Topics</Button>
+        <Button variant="contained">Topics</Button>
       </Link>
     </nav>
   )

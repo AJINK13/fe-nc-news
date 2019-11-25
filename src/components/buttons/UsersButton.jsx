@@ -6,7 +6,7 @@ function UsersButton() {
   return (
     <nav>
       <Link to="/users">
-        <Button>Users</Button>
+        <Button variant="contained">Users</Button>
       </Link>
     </nav>
   )

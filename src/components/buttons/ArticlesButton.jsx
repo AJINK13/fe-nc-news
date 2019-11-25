@@ -6,7 +6,7 @@ function ArticlesButton() {
   return (
     <nav>
       <Link to="/articles">
-        <Button>Articles</Button>
+        <Button variant="contained">Articles</Button>
       </Link>
     </nav>
   )
