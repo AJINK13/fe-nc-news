@@ -2,7 +2,6 @@ import React from "react"
 import "./App.css"
 import { Router } from "@reach/router"
 import Header from "./components/views/Header.jsx"
-import TimeDisplay from "./components/views/TimeDisplay.jsx"
 import LinkButtons from "./components/views/LinkButtons.jsx"
 import Homepage from "./components/views/Homepage.jsx"
 import Articles from "./components/views/Articles.jsx"
@@ -21,7 +20,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <TimeDisplay />
         <LinkButtons />
         <Router>
           <Homepage path="/" />
