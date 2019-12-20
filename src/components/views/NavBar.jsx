@@ -4,11 +4,17 @@ const NavBar = () => {
   return (
     <div className="topnav">
       <a className="active" href="/">
-        Homepage
+        <i class="fas fa-home"></i> Homepage
       </a>
-      <a href="/articles">Articles</a>
-      <a href="/topics">Topics</a>
-      <a href="/users">Users</a>
+      <a href="/articles">
+        <i class="fas fa-newspaper"></i> Articles
+      </a>
+      <a href="/topics">
+        <i class="fas fa-book"></i> Topics
+      </a>
+      <a href="/users">
+        <i class="fas fa-users"></i> Users
+      </a>
     </div>
   )
 }
