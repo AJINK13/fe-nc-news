@@ -1,6 +1,7 @@
 import React from "react"
 import "./App.css"
 import { Router } from "@reach/router"
+import NavBar from "./components/views/NavBar.jsx"
 import Header from "./components/views/Header.jsx"
 import LinkButtons from "./components/views/LinkButtons.jsx"
 import Homepage from "./components/views/Homepage.jsx"
@@ -19,6 +20,7 @@ class App extends React.Component {
     const { loggedInUser } = this.state
     return (
       <div className="App">
+        <NavBar />
         <Header />
         <LinkButtons />
         <Router>
