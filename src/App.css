@@ -1,5 +1,7 @@
 .App {
+  background-color: white;
   text-align: center;
+  font-family: 'Muli', sans-serif;
 }
 
 .App-header {
@@ -11,6 +13,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.news-concept-header {
+color: black;
 }
 
 .topnav {
