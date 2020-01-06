@@ -1,5 +1,6 @@
 .App {
   background-color: white;
+  color: black;
   text-align: center;
   font-family: 'Muli', sans-serif;
 }
@@ -13,10 +14,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.news-concept-header {
-color: black;
 }
 
 .topnav {
