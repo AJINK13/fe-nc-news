@@ -3,7 +3,7 @@ import React from "react"
 const NavBar = () => {
   return (
     <div className="topnav">
-      <a className="active" href="/">
+      <a href="/">
         <i class="fas fa-home"></i> Homepage
       </a>
       <a href="/articles">
