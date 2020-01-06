@@ -29,7 +29,7 @@ class Articles extends React.Component {
         <SortArticles fetchArticles={this.fetchArticles} />
         <ul>
           {articles.map(article => {
-            return <ArticleCard article={article} key={article.article_id} />
+            return <ArticleCard className="article-card" article={article} key={article.article_id} />
           })}
         </ul>
       </main>
