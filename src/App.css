@@ -2,7 +2,7 @@
   background-color: white;
   color: black;
   text-align: center;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 .App-header {
@@ -16,12 +16,23 @@
   color: white;
 }
 
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* navbar styling */
+
 .topnav {
   background-color: black;
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   color: white;
@@ -31,8 +42,65 @@
   font-size: 16px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   background-color: ghostwhite;
   color: black;
 }
+
+/* homepage styling */
+
+.homepage {
+  min-height: 100vh;
+  background-image: url("./images/newspaper.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.homepage .homepage-content {
+  display: flex;
+  flex: 0 0 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.homepage .homepage-content .welcome-message {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-top: 20%;
+}
+
+.homepage .homepage-content .welcome-message h3 {
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage .homepage-content .welcome-message h1 {
+  color: black;
+  font-size: 90px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+/* articles */
+
+/* .articles {
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  grid-auto-rows: 30px auto 30px 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px;
+  list-style-type: none;
+  background: #cfcfcf;
+  border: 2px solid #282c34;
+  border-radius: 5px;
+  font-size: 1.5em;
+  align-items: center;
+} */
