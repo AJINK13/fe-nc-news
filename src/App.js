@@ -2,7 +2,6 @@ import React from "react"
 import "./App.css"
 import { Router } from "@reach/router"
 import NavBar from "./components/views/NavBar.jsx"
-import Header from "./components/views/Header.jsx"
 import Homepage from "./components/views/Homepage.jsx"
 import Articles from "./components/views/Articles.jsx"
 import Topics from "./components/views/Topics.jsx"
@@ -20,7 +19,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <Header />
         <Router>
           <Homepage path="/" />
           <Articles path="/articles" />
