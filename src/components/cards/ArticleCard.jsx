@@ -7,7 +7,7 @@ const ArticleCard = props => {
   const { title, author, topic, created_at, votes, article_id } = props.article
 
   return (
-    <main>
+    <div className="article-card">
       <nav>
         <Link to={`/articles/${article_id}`}>
           <h3>{title}</h3>
@@ -20,7 +20,7 @@ const ArticleCard = props => {
         Date Created:{" "}
         {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
       </h6>
-    </main>
+    </div>
   )
 }
 
