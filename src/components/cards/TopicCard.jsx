@@ -10,13 +10,13 @@ class TopicCard extends React.Component {
   render() {
     const { topic } = this.props
     return (
-      <main>
+      <div>
         <Link to={`/topics/${topic.slug}`}>
           <h3>
             {topic.slug.charAt(0).toUpperCase() + topic.slug.substring(1)}
           </h3>
         </Link>
-      </main>
+      </div>
     )
   }
 }
