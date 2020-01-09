@@ -5,7 +5,6 @@ import NavBar from "./components/views/NavBar.jsx"
 import Homepage from "./components/views/Homepage.jsx"
 import Articles from "./components/views/Articles.jsx"
 import Topics from "./components/views/Topics.jsx"
-import Users from "./components/views/Users.jsx"
 import SingleArticle from "./components/views/SingleArticle.jsx"
 import ErrorPage from "./components/views/ErrorPage"
 
@@ -23,7 +22,6 @@ class App extends React.Component {
           <Homepage path="/" />
           <Articles path="/articles" />
           <Topics path="/topics/*" />
-          <Users path="/users" />
           <SingleArticle
             path="/articles/:article_id/*"
             loggedInUser={loggedInUser}
