@@ -25,17 +25,17 @@ class Topics extends React.Component {
       )
 
     return (
-      <main>
+      <div className="topics">
         <h2>Topics</h2>
-        <ul>
+        <ul className="topics-links">
           {topics.map(topic => {
             return <TopicCard topic={topic} key={topic.description} />
           })}
-        </ul>
+        </ul >
         <Router>
           <Articles path="/:topic" />
         </Router>
-      </main>
+      </div>
     )
   }
 
