@@ -14,9 +14,9 @@ class VoteUpdater extends React.Component {
     const { votes, article_id, comment_id } = this.props
 
     return (
-      <>
+      <div className="vote-updater">
         <h6>Votes: {votes + voteChange}</h6>
-        <Button
+        <Button className="button-like"
           variant="contained"
           startIcon={<ThumbUpIcon />}
           onClick={() => this.updateVotes(1, article_id, comment_id)}
@@ -25,7 +25,7 @@ class VoteUpdater extends React.Component {
           {" "}
           LIKE{" "}
         </Button>
-        <Button
+        <Button className="button-dislike"
           variant="contained"
           startIcon={<ThumbDownIcon />}
           onClick={() => this.updateVotes(-1, article_id, comment_id)}
@@ -34,7 +34,7 @@ class VoteUpdater extends React.Component {
           {" "}
           DISLIKE{" "}
         </Button>
-      </>
+      </div>
     )
   }
 
