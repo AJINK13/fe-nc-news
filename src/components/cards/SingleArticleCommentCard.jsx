@@ -7,6 +7,13 @@ const SingleArticleCommentCard = props => {
   const { author, body, created_at, votes, comment_id } = props.comment
   return (
     <div className="comment-card">
+      <p>{body}</p>
+      <h4>Author: {author}</h4>
+      <VoteUpdater votes={votes} comment_id={comment_id} />
+      <h5>
+        Date Created:{" "}
+        {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
+      </h5>
       {props.loggedInUser === author ? (
         <RemoveComment
           removeCommentByCommentID={props.removeCommentByCommentID}
@@ -14,13 +21,6 @@ const SingleArticleCommentCard = props => {
           loggedInUser={props.loggedInUser}
         />
       ) : null}
-      <h3>Author: {author}</h3>
-      <h4>{body}</h4>
-      <VoteUpdater votes={votes} comment_id={comment_id} />
-      <h6>
-        Date Created:{" "}
-        {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
-      </h6>
     </div>
   )
 }

@@ -15,7 +15,7 @@ class VoteUpdater extends React.Component {
 
     return (
       <div className="vote-updater">
-        <h6>Votes: {votes + voteChange}</h6>
+        <h5>Votes: {votes + voteChange}</h5>
         <Button className="button-like"
           variant="contained"
           startIcon={<ThumbUpIcon />}

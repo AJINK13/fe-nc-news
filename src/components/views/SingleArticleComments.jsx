@@ -25,13 +25,13 @@ class SingleArticleComments extends React.Component {
       )
 
     return (
-      <main>
+      <div className="single-article-comments">
         <h2>Article Comments</h2>
         <AddComment
           addCommentByArticleID={this.addCommentByArticleID}
           loggedInUser={loggedInUser}
         />
-        <ul>
+        <ul className="article-comments-ul">
           {comments.map(comment => {
             return (
               <SingleArticleCommentCard
@@ -43,7 +43,7 @@ class SingleArticleComments extends React.Component {
             )
           })}
         </ul>
-      </main>
+      </div>
     )
   }
 
