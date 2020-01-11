@@ -1,21 +1,41 @@
 /* global styling */
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   background-color: white;
   color: black;
   text-align: center;
   font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+}
+
+.App > *:not(header) {
+  height: 100%;
 }
 
 /* navbar styling */
 
-.topnav {
-  background-color: black;
-  overflow: hidden;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-.topnav a {
-  float: left;
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar a {
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -23,7 +43,7 @@
   font-size: 16px;
 }
 
-.topnav a:hover {
+.navbar a:hover {
   background-color: ghostwhite;
   color: black;
 }
@@ -31,38 +51,162 @@
 /* homepage styling */
 
 .homepage {
-  min-height: 100vh;
+  height: 100%;
   background-image: url("./images/newspaper.jpg");
   background-size: cover;
   background-position: center;
-}
-
-.homepage .homepage-content {
   display: flex;
-  flex: 0 0 100%;
-  max-width: 100%;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
-.homepage .homepage-content .welcome-message {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-top: 20%;
-}
-
-.homepage .homepage-content .welcome-message h3 {
+.homepage h1 {
   color: black;
-  font-size: 40px;
+  font-size: 90px;
   font-weight: 600;
-  margin: 0;
+  margin: 0 0 10px 0px;
   padding: 0;
 }
 
-.homepage .homepage-content .welcome-message h1 {
+/* sort articles styling */
+
+.sort-articles form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sort-articles form .input-container {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px 15px;
+}
+
+/* articles styling */
+
+.articles h2 {
   color: black;
   font-size: 90px;
   font-weight: 600;
   margin: 0 0 10px;
   padding: 0;
+}
+
+.articles .articles-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.articles .articles-dropdowns {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: crimson;
+}
+
+.articles .articles-ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/* article card styling */
+
+.article-card {
+  background-color: whitesmoke;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+}
+
+.article-card h3 {
+  color: black;
+  text-decoration: none;
+}
+
+.article-card h4 {
+  color: yellow;
+}
+
+.article-card h5 {
+  color: cyan;
+}
+
+.article-card h6 {
+  color: orchid;
+  margin-bottom: 10px;
+}
+
+.vote-updater button {
+  background-color: white;
+  margin: 0 5px;
+  width: 45%;
+}
+
+.vote-updater .button-like {
+  color: green;
+}
+
+.vote-updater .button-dislike {
+  color: red;
+}
+/* topics styling */
+
+.topics h2 {
+  color: black;
+  font-size: 90px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.topics-links {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* topic card */
+
+.topic-card {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+}
+
+.topic-card h3 {
+  color: black;
+  text-align: center;
+}
+
+/* comments styling */
+
+/* comment card styling */
+
+.comment-card {
+  background-color: whitesmoke;
+  margin: 2px 0px 2px 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
