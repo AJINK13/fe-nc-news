@@ -13,29 +13,35 @@ class SortArticles extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="sort-articles">
         <form onSubmit={this.HandleSubmit}>
-          <InputLabel>Sort By</InputLabel>
-          <Select name="sort_by" onChange={this.handleChange}>
-            <MenuItem value="created_at">Date Created</MenuItem>
-            <MenuItem value="comment_count">Comments</MenuItem>
-            <MenuItem value="votes">Votes</MenuItem>
-          </Select>
-          <InputLabel> Order</InputLabel>
-          <Select name="order" onChange={this.handleChange}>
-            <MenuItem value="desc">Descending</MenuItem>
-            <MenuItem value="asc">Ascending</MenuItem>
-          </Select>
+          <div className="input-container">
+            <InputLabel>Sort By</InputLabel>
+            <Select name="sort_by" onChange={this.handleChange}>
+              <MenuItem value="created_at">Date Created</MenuItem>
+              <MenuItem value="comment_count">Comments</MenuItem>
+              <MenuItem value="votes">Votes</MenuItem>
+            </Select>
+          </div>
+          <div className="input-container">
+            <InputLabel> Order</InputLabel>
+            <Select name="order" onChange={this.handleChange}>
+              <MenuItem value="desc">Descending</MenuItem>
+              <MenuItem value="asc">Ascending</MenuItem>
+            </Select>
+          </div>
+          <div className="input-container">
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              startIcon={<SortIcon />}
+              onClick={this.handleSubmit}
+            >
+              Sort
+            </Button>
+          </div>
         </form>
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          startIcon={<SortIcon />}
-          onClick={this.handleSubmit}
-        >
-          Sort
-        </Button>
       </div>
     )
   }
