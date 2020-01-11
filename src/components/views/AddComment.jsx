@@ -10,19 +10,21 @@ class AddComment extends React.Component {
   render() {
     const { body } = this.state
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>Comment</label>
-        <input onChange={this.handleChange} type="text" name="body"></input>
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          startIcon={<PublishIcon />}
-          disabled={body.length === 0}
-        >
-          Submit
-        </Button>
-      </form>
+      <div className="add-comment">
+        <form onSubmit={this.handleSubmit}>
+          <label>Comment Here</label>
+          <input onChange={this.handleChange} type="text" name="body"></input>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            startIcon={<PublishIcon />}
+            disabled={body.length === 0}
+          >
+            Submit
+          </Button>
+        </form>
+      </div>
     )
   }
 

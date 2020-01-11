@@ -13,7 +13,7 @@ const RemoveComment = props => {
         removeCommentByCommentID(comment_id)
       }}
     >
-      DELETE COMMENT
+      DELETE
     </Button>
   )
 }
