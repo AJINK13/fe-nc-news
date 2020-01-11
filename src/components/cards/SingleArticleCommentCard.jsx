@@ -6,7 +6,7 @@ const moment = require("moment")
 const SingleArticleCommentCard = props => {
   const { author, body, created_at, votes, comment_id } = props.comment
   return (
-    <main>
+    <div className="comment-card">
       {props.loggedInUser === author ? (
         <RemoveComment
           removeCommentByCommentID={props.removeCommentByCommentID}
@@ -21,7 +21,7 @@ const SingleArticleCommentCard = props => {
         Date Created:{" "}
         {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
       </h6>
-    </main>
+    </div>
   )
 }
 
