@@ -64,8 +64,6 @@ header {
   color: black;
   font-size: 90px;
   font-weight: 600;
-  margin: 0 0 10px 0px;
-  padding: 0;
 }
 
 /* sort articles styling */
@@ -85,14 +83,6 @@ header {
 }
 
 /* articles styling */
-
-.articles .articles-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-}
 
 .articles .articles-dropdowns {
   padding-top: 10px;
@@ -219,4 +209,88 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+  .homepage h1 {
+    color: black;
+    font-size: 56px;
+    font-weight: 400;
+    padding: 0;
+  }
+
+  .sort-articles form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sort-articles form .input-container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .articles .articles-ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 5px;
+  }
+
+  .single-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 10px;
+  }
+
+  .add-comment form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .add-comment label {
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+
+  .add-comment input {
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+
+  .add-comment button {
+    padding: 5px 0;
+    margin: 10px 5px;
+    width: 50%;
+  }
+
+  .article-comments-ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 5px;
+  }
+
+  .comment-card {
+    background-color: whitesmoke;
+    padding: 5pxpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    color: black;
+  }
 }

@@ -10,10 +10,7 @@ const SingleArticleCommentCard = props => {
       <p>{body}</p>
       <h4>Author: {author}</h4>
       <VoteUpdater votes={votes} comment_id={comment_id} />
-      <h5>
-        Date Created:{" "}
-        {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
-      </h5>
+      <h5>{moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}</h5>
       {props.loggedInUser === author ? (
         <RemoveComment
           removeCommentByCommentID={props.removeCommentByCommentID}

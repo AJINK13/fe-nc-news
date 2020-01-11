@@ -37,7 +37,6 @@ class SingleArticle extends React.Component {
         <h4>Author: {article.author}</h4>
         <VoteUpdater votes={article.votes} article_id={article.article_id} />
         <h5>
-          Date Created:{" "}
           {moment(article.created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
         </h5>
         <nav>

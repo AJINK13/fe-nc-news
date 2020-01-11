@@ -16,10 +16,7 @@ const ArticleCard = props => {
       <h4>Topic: {topic.charAt(0).toUpperCase() + topic.substring(1)}</h4>
       <h5>Author: {author}</h5>
       <VoteUpdater votes={votes} article_id={article_id} />
-      <h6>
-        Date Created:{" "}
-        {moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
-      </h6>
+      <h6>{moment(created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}</h6>
     </div>
   )
 }
