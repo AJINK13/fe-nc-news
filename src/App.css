@@ -86,14 +86,6 @@ header {
 
 /* articles styling */
 
-.articles h2 {
-  color: black;
-  font-size: 90px;
-  font-weight: 600;
-  margin: 0 0 10px;
-  padding: 0;
-}
-
 .articles .articles-card {
   display: flex;
   flex-direction: column;
@@ -127,14 +119,16 @@ header {
   color: black;
 }
 
-.article-card h6 {
-  margin-bottom: 10px;
-}
+/* vote updater styling */
 
 .vote-updater button {
   background-color: white;
   margin: 0 5px;
   width: 45%;
+}
+
+.vote-updater h6 {
+  margin-bottom: 10px;
 }
 
 .vote-updater .button-like {
@@ -144,19 +138,12 @@ header {
 .vote-updater .button-dislike {
   color: red;
 }
+
 /* topics styling */
 
-.topics h2 {
-  color: black;
-  font-size: 90px;
-  font-weight: 600;
-  margin: 0 0 10px;
-  padding: 0;
-}
-
 .topics-links {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -182,8 +169,6 @@ header {
   text-align: center;
 }
 
-/* comments styling */
-
 /* comment card styling */
 
 .comment-card {
@@ -195,4 +180,33 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* single article styling */
+
+.single-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.single-article h2 {
+  padding: 10px 0;
+}
+
+.single-article h3 {
+  padding: 10px 0;
+}
+
+.single-article p {
+  padding: 10px 0;
+}
+
+.single-article h4 {
+  padding: 10px 0;
+}
+
+.single-article h5 {
+  padding: 10px 0;
 }

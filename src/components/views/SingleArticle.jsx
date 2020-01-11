@@ -27,17 +27,19 @@ class SingleArticle extends React.Component {
       )
 
     return (
-      <main>
-        <h2>Article</h2>
-        <h3>{article.title}</h3>
-        <h4>Topic: {article.topic}</h4>
-        <h4>{article.body}</h4>
-        <h5>Author: {article.author}</h5>
+      <div className="single-article">
+        <h2>{article.title}</h2>
+        <h3>
+          Topic:{" "}
+          {article.topic.charAt(0).toUpperCase() + article.topic.substring(1)}
+        </h3>
+        <p>{article.body}</p>
+        <h4>Author: {article.author}</h4>
         <VoteUpdater votes={article.votes} article_id={article.article_id} />
-        <h6>
+        <h5>
           Date Created:{" "}
           {moment(article.created_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}
-        </h6>
+        </h5>
         <nav>
           <Link
             to={`/articles/${article.article_id}/${
@@ -50,7 +52,7 @@ class SingleArticle extends React.Component {
         <Router>
           <SingleArticleComments path="/comments" loggedInUser={loggedInUser} />
         </Router>
-      </main>
+      </div>
     )
   }
 
