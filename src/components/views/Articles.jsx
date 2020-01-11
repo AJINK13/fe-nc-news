@@ -24,15 +24,17 @@ class Articles extends React.Component {
       )
 
     return (
-      <main>
+      <div className="articles">
         <h2>Articles</h2>
-        <SortArticles fetchArticles={this.fetchArticles} />
-        <ul>
+        <div className="articles-dropdowns">
+          <SortArticles fetchArticles={this.fetchArticles} />
+        </div>
+        <ul className="articles-ul">
           {articles.map(article => {
             return <ArticleCard article={article} key={article.article_id} />
           })}
         </ul>
-      </main>
+      </div>
     )
   }
 
