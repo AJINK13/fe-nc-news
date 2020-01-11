@@ -26,7 +26,6 @@ class Topics extends React.Component {
 
     return (
       <div className="topics">
-        <h2>Topics</h2>
         <ul className="topics-links">
           {topics.map(topic => {
             return <TopicCard topic={topic} key={topic.description} />
