@@ -13,7 +13,12 @@ class AddComment extends React.Component {
       <div className="add-comment">
         <form onSubmit={this.handleSubmit}>
           <label>Comment Here</label>
-          <input onChange={this.handleChange} type="text" name="body"></input>
+          <input
+            className="comment-box"
+            onChange={this.handleChange}
+            type="text"
+            name="body"
+          ></input>
           <Button
             type="submit"
             variant="contained"

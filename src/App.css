@@ -211,6 +211,11 @@ header {
   justify-content: space-evenly;
 }
 
+.add-comment .comment-box {
+  height: 100px;
+  width: 300px;
+}
+
 /* media queries */
 
 @media only screen and (max-width: 600px) {
