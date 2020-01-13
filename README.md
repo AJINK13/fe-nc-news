@@ -33,7 +33,7 @@ Alternatively, you can use [yarn](https://yarnpkg.com/en/) instead of npm. The n
 
 > git clone `https://github.com/AJINK13/fe-nc-news`
 
-2. 2. Install dependencies
+2. Install dependencies
 
 > npm install
 
